@@ -30,3 +30,6 @@ print (tob1)
 tcritval(0.025,63)
 
 pvaluenotequal(tob1,63)
+
+name = input("What is your name? ")
+print ("Hello " + name)
