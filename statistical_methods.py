@@ -11,15 +11,15 @@ def tob(x1,x2,n1,n2,sigma):
     numerator = x1-x2
     denominator = sigma * (math.sqrt((1/n1)+(1/n2)))
     return numerator/denominator
-# pooled t crit value
+# pooled t crit value for invT(a,df)
 
 def tcritval(a,df):
     alpha = scipy.stats.t.ppf(1-a,df)
     print (alpha)
 
-# p value from plugging in tob to t.cdf equation for not equal to hepothesis
+# p value from plugging in tob to t.cdf(-100000000,-|tcrit|,0,1) equation for not equal to hypothesis
 def pvaluenotequal(tcrit,df):
-    print (2*(scipy.stats.t.cdf(tcrit,df)))
+    print (2*(scipy.stats.t.cdf(-abs(tcrit),df)))
 
 sigmap = pooledsigma(30,35,23.95,26.21)
 print (sigmap)
@@ -31,5 +31,12 @@ tcritval(0.025,63)
 
 pvaluenotequal(tob1,63)
 
-name = input("What is your name? ")
-print ("Hello " + name)
+# name = input("What is your name? ")
+# print ("Hello " + name)
+#
+# x1=input("What is xbar1? ")
+# x2=input("What is xbar2? ")
+# s1=input("What is sigma1? ")
+# s2=input("What is sigma2? ")
+# n1=input("What is n1? ")
+# n2=input("What is n2? ")
