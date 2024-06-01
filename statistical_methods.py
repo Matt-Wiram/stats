@@ -40,3 +40,17 @@ pvaluenotequal(tob1,63)
 # s2=input("What is sigma2? ")
 # n1=input("What is n1? ")
 # n2=input("What is n2? ")
+
+def kiloToMiles(x):
+    return x * 0.62137119
+
+def milesToKilo(x):
+    return x /  0.62137119
+
+print (kiloToMiles(3))
+
+print (milesToKilo(1.8641135699999998))
+
+def triarea(l,w):
+    return (l*w)/2
+print (triarea(3,5))
